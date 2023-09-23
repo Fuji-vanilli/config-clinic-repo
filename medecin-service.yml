@@ -1,5 +1,5 @@
 server:
-  port: 3100
+  port: 3110
 
 eureka:
   client:
@@ -9,4 +9,4 @@ eureka:
 spring:
   data:
     mongodb:
-      uri: mongodb://localhost:27017/CL-PATIENT-DB
+      uri: mongodb://localhost:27017/CL-MEDECIN-DB
