@@ -9,6 +9,9 @@ eureka:
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/CL-PORTE-DB
+    username: root
+    password:
+
   jpa:
     hibernate:
       ddl-auto: create
