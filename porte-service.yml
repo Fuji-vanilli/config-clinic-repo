@@ -15,8 +15,8 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL5Dialect
-        format_sql: true
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.MySQL5Dialect
+          format_sql: true
     show-sql: true
