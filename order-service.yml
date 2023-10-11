@@ -10,3 +10,9 @@ spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017/CL-ORDER-DB
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: *
