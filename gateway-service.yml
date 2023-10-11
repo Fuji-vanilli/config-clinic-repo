@@ -11,3 +11,42 @@ management:
     web:
       exposure:
         include: *
+
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        cloud:
+          - gateway:
+            route:
+              RouteDefinitionLocator: INFO
+          - gateway: TRACE
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        #medecin-service API
+        - id: medecin-service
+          uri: lb://medecin-service
+          predicates:
+            - Path= /api/medecin/**
+        #patient-service API
+        - id: patient-service
+          uri: lb://patient-service
+          predicates:
+            - Path= /api/patient/**
+        #user-service API
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path= /api/user/**
+        #porte-service API
+        - id: porte-service
+          uri: lb://porte-service
+          predicates:
+            - Path= /api/porte/**
+
+
+
