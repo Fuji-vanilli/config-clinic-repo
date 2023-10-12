@@ -1,0 +1,19 @@
+server:
+  port: 3190
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/CL-INVENTORY-DB
+
