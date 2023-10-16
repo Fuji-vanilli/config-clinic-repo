@@ -1,5 +1,5 @@
 server:
-  port: 3010
+  port: 8888
 
 eureka:
   client:
@@ -47,6 +47,18 @@ spring:
           uri: lb://porte-service
           predicates:
             - Path= /api/porte/**
+
+        #orderLine-service API
+        - id: orderLine-service
+          uri: lb://orderLine-service
+          predicates:
+            - Path= /api/orderLine/**
+
+        #order-service API
+        - id: order-service
+          uri: lb://order-service
+          predicates:
+            - Path= /api/order/**
 
 
 
