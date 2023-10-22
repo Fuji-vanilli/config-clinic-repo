@@ -62,6 +62,6 @@ spring:
 
         #medicament-service API
         - id: medicament-service
-          uri: lb//medicament-service
+          uri: lb://medicament-service
           predicates:
             - Path= /api/medicament-service
