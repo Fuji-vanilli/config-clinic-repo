@@ -65,3 +65,16 @@ spring:
           uri: lb://medicament-service
           predicates:
             - Path= /api/medicament-service
+
+  security:
+    oauth2:
+      resourceServer:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/clinic-realm
+          jwk-set-url: ${spring.security.oauth2.resourceServer.jwt.issuer-uri}/protocol/openid-connect/certs
+
+jwt:
+  auth:
+    converter:
+      resource-id: user-service
+      principal-attribute: preferred_name

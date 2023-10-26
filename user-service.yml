@@ -12,6 +12,8 @@ management:
       exposure:
         include: "*"
 
+
+
 spring:
   data:
     mongodb:
