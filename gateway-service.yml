@@ -67,11 +67,11 @@ spring:
             - Path= /api/medicament-service
 
   security:
-    oauth2:
-      resourceServer:
+    auth2:
+      configServer:
         jwt:
           issuer-uri: http://localhost:8080/realms/clinic-realm
-          jwk-set-url: ${spring.security.oauth2.resourceServer.jwt.issuer-uri}/protocol/openid-connect/certs
+          jwk-set-url: ${spring.security.auth2.configServer.jwt.issuer-uri}/protocol/openid-connect/certs
 
 jwt:
   auth:
