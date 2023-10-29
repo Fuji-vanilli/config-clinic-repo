@@ -67,7 +67,7 @@ spring:
             - Path= /api/medicament-service
 
   security:
-    auth2:
+    oauth2:
       configServer:
         jwt:
           issuer-uri: http://localhost:8080/realms/clinic-realm
